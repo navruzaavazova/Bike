@@ -1,5 +1,4 @@
 import 'package:bike/description/description.dart';
-import 'package:bike/home/home_page.dart';
 import 'package:bike/main/main_page.dart';
 import 'package:bike/my_cart_page/my_cart_page.dart';
 import 'package:bike/utils/app_colors.dart';
