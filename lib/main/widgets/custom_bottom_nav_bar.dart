@@ -43,6 +43,18 @@ class _CurvePainter extends CustomPainter {
 
     canvas.drawPath(path, paint);
 
+    Path backPath = Path();
+
+    final Paint backPaint = Paint()
+      ..color = Colors.transparent
+      ..style = PaintingStyle.fill;
+
+    backPath.moveTo(0, 0);
+    backPath.lineTo(0, size.height * 0.1923077);
+    backPath.lineTo(size.width, 0);
+    backPath.lineTo(0, 0);
+    canvas.drawPath(backPath, backPaint);
+
     Gradient borderGradient = LinearGradient(
       colors: <Color>[
         Colors.white.withOpacity(.2),
@@ -61,6 +73,6 @@ class _CurvePainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
+    return false;
   }
 }

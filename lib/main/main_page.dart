@@ -5,6 +5,7 @@ import 'package:bike/main/widgets/bottom_item_widget.dart';
 import 'package:bike/main/widgets/custom_bottom_nav_bar.dart';
 import 'package:bike/map/map_page.dart';
 import 'package:bike/profile/profile_page.dart';
+import 'package:bike/utils/app_colors.dart';
 import 'package:bike/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,8 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      backgroundColor: AppColors.backgroundColor,
       body: PageView(
         controller: pageController,
         physics: const NeverScrollableScrollPhysics(),
@@ -46,8 +49,9 @@ class _MainPageState extends State<MainPage> {
         child: ValueListenableBuilder(
             valueListenable: currentPageIndex,
             builder: (context, value, child) {
-              return SizedBox(
+              return Container(
                 height: 104,
+                color: Colors.transparent,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
