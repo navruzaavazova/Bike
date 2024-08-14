@@ -53,6 +53,7 @@ class CartItemState extends State<CartItem> {
         const Divider(
           color: Colors.white30,
           thickness: 0.5,
+          height: 32.5,
         ),
       ],
     );

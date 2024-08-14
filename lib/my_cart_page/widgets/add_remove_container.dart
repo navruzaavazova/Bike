@@ -51,7 +51,6 @@ class AddRemoveContainer extends StatelessWidget {
                   colors: AppColors.blueGradient,
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-
                   stops: [0, 1],
                 ),
                 borderRadius: BorderRadius.circular(5),

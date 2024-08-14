@@ -1,4 +1,4 @@
-import 'package:bike/description/description.dart';
+import 'package:bike/description/description_page.dart';
 import 'package:bike/main/main_page.dart';
 import 'package:bike/my_cart_page/my_cart_page.dart';
 import 'package:bike/utils/app_colors.dart';
@@ -19,7 +19,7 @@ class App extends StatelessWidget {
       initialRoute: AppRoutesNames.myCart,
       routes: {
         AppRoutesNames.homePage: (context) => const MainPage(),
-        AppRoutesNames.description: (context) => const Description(),
+        AppRoutesNames.description: (context) => const DescriptionPage(),
         AppRoutesNames.myCart: (context) => const MyCartPage(),
 
       },

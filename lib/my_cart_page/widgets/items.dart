@@ -17,9 +17,9 @@ class Items extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
+      height: 90,
+      margin: const EdgeInsets.symmetric(
         horizontal: 20,
-        vertical: 16,
       ),
       child: Row(
         children: [
@@ -27,24 +27,24 @@ class Items extends StatelessWidget {
           const SizedBox(
             width: 16,
           ),
-          Container(
-            height: 90,
-            padding: const EdgeInsets.symmetric(vertical: 6.5),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  bikeName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 6.5,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    bikeName,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 255,
-                  child: Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
@@ -58,8 +58,8 @@ class Items extends StatelessWidget {
                       addRemoveChild,
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],

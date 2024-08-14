@@ -75,7 +75,6 @@ class MyCartPageState extends State<MyCartPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  
                   SizedBox(
                     height: 71,
                     child: Center(

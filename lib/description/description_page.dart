@@ -3,6 +3,7 @@ import 'package:bike/description/widgets/dots.dart';
 import 'package:bike/description/widgets/info_container.dart';
 import 'package:bike/description/widgets/price_container.dart';
 import 'package:bike/description/widgets/text_container.dart';
+import 'package:bike/my_data_widget.dart';
 import 'package:bike/widgets/blue_gradient_button.dart';
 import 'package:bike/widgets/title_bar.dart';
 import 'package:bike/utils/app_background_image.dart';
@@ -12,16 +13,16 @@ import 'package:bike/utils/app_routes_names.dart';
 import 'package:bike/utils/app_string.dart';
 import 'package:flutter/material.dart';
 
-class Description extends StatefulWidget {
-  const Description({
+class DescriptionPage extends StatefulWidget {
+  const DescriptionPage({
     super.key,
   });
 
   @override
-  DescriptionState createState() => DescriptionState();
+  DescriptionPageState createState() => DescriptionPageState();
 }
 
-class DescriptionState extends State<Description> {
+class DescriptionPageState extends State<DescriptionPage> {
   int selectedDotIndex = 0;
   int selectedButtonIndex = -1;
   bool isSelect = false;
@@ -37,11 +38,13 @@ class DescriptionState extends State<Description> {
       selectedButtonIndex = index;
     });
   }
-  void addCartFunc(){
-    Navigator.pushNamed(context, AppRoutesNames.myCart);
+
+  void addCartFunc() {
+    // Navigator.pushNamed(context, AppRoutesNames.myCart);
+    MyDataWidget.of(context)?.cartCount++;
   }
 
-  void backToPreviousPage(){
+  void backToPreviousPage() {
     Navigator.pop(context);
   }
 
@@ -102,7 +105,11 @@ class DescriptionState extends State<Description> {
                   ),
                   PriceContainer(
                     func: addCartFunc,
-                    buttonChild: BlueGradientButton(buttonText: AppString.addToCart, func: addCartFunc, width: 160, isShadow: true),
+                    buttonChild: BlueGradientButton(
+                        buttonText: AppString.addToCart,
+                        func: addCartFunc,
+                        width: 160,
+                        isShadow: true),
                   ),
                 ],
               ),

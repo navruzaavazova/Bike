@@ -37,9 +37,10 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(64),
+        preferredSize: const Size.fromHeight(64),
         child: AppBar(
           backgroundColor: AppColors.backgroundColor,
+          leading: const SizedBox.shrink(),
           flexibleSpace: const Padding(
             padding: EdgeInsets.only(
               top: 60,
